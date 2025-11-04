@@ -3,6 +3,8 @@
 Um serviço moderno e escalável para encurtamento de URLs, construído com foco em **simplicidade**, **performance** e **boas práticas de arquitetura**.  
 Permite criar links curtos, rastrear estatísticas de acesso e gerenciar redirecionamentos de forma eficiente.
 
+Minha ideia de criar esse projeto foi apenas para treinar pequenos conceitos e desenvolver minha capacidade de gerar soluções escaláveis.
+
 ---
 
 ## 🧠 Sumário
@@ -36,10 +38,6 @@ Pode ser usada em sistemas internos, aplicações SaaS ou integrações externas
 
 ---
 
-## 🧱 Arquitetura
-
-A aplicação segue princípios de **Arquitetura Hexagonal (Ports & Adapters)**, permitindo fácil troca de provedores e desacoplamento das camadas de domínio e infraestrutura.
-
 ## 🧩 Tecnologias
 
 | Categoria             | Ferramenta / Lib            |
@@ -52,4 +50,7 @@ A aplicação segue princípios de **Arquitetura Hexagonal (Ports & Adapters)**,
 | Containerização       | **Docker / Docker Compose** |
 | Linter / Formatter    | **Biome**                   |
 
+A utilização da biblioteca *nanoid* ajuda bastante quando a ideia é gerar hashes escaláveis. Nesse projeto utilizei um padrão de caractéres para um código hash ser gerado, utilizando A-Z, a-z e 0-9 no padrão de Base62. Essa estratégia me permitiu ter um resguardo quando o assunto é conflito entre chaves únicas.
+
+Utilizando esse formato de hash, eu consigo escalar minha aplicação para mais de 3 trilhões de hashes possíveis de serem utilizados.
 ---
