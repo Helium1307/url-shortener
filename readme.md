@@ -53,4 +53,5 @@ Pode ser usada em sistemas internos, aplicações SaaS ou integrações externas
 A utilização da biblioteca *nanoid* ajuda bastante quando a ideia é gerar hashes escaláveis. Nesse projeto utilizei um padrão de caractéres para um código hash ser gerado, utilizando A-Z, a-z e 0-9 no padrão de Base62. Essa estratégia me permitiu ter um resguardo quando o assunto é conflito entre chaves únicas.
 
 Utilizando esse formato de hash, eu consigo escalar minha aplicação para mais de 3 trilhões de hashes possíveis de serem utilizados.
+
 ---
